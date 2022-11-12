@@ -1,0 +1,15 @@
+@import '@/scss/breakpoints';
+
+.app {
+  max-width: 45rem;
+  margin-inline: auto;
+  padding-block: 32px;
+}
+
+.nav {
+  padding-block-end: 16px;
+
+  @include media-breakpoint-up(tablet) {
+    padding-block-end: 26px;
+  }
+}

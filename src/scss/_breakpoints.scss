@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$bearkpoints: (
+  "mobile": 576px,
+  "tablet": 768px,
+  "laptop": 992px,
+  "desktop": 1200px,
+  "ldesktop": 1400px
+);
+
+@mixin media-breakpoint-up($bearkpoint) {
+  @if not map-has-key($bearkpoints, $bearkpoint) {
+    @error "Invalid breakpoint provided (#{$bearkpoint}) must be on of (#{map.keys($bearkpoints)})";
+  }
+
+  @media (min-width: #{map-get($bearkpoints, $bearkpoint)}) {
+    @content;
+  }
+}

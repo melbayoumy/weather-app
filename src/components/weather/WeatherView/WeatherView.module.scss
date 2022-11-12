@@ -1,0 +1,25 @@
+@import '@/scss/breakpoints';
+
+.wrapper {
+    border: 5px solid var(--color-white);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.elements {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(tablet) {
+        flex-wrap: nowrap;
+    }
+}
+
+.error {
+    color: var(--color-danger);
+    background-color: var(--color-danger-light);
+    padding: 1rem;
+    text-align: center;
+}

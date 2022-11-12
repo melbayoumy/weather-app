@@ -1,0 +1,32 @@
+@import '@/scss/breakpoints';
+
+.wrapper {
+    border-top: 5px solid var(--color-white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 27px 0;
+    font-size: 1.2rem;
+    min-height: 14.125rem;
+
+    &:last-child {
+        border-right: none;
+    }
+
+    @include media-breakpoint-up(tablet) {
+        border-right: 5px solid var(--color-white);
+    }
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--color-secondary);
+}
+
+.header {
+    font-family: var(--font-family-numbers);
+    font-size: 2.5rem;
+}

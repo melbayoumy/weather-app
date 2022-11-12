@@ -1,0 +1,24 @@
+@import '@/scss/breakpoints';
+
+.link {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s;
+    padding: 8px 32px;
+    width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(tablet) {
+        width: auto;
+    }
+
+    &:hover,
+    &.active {
+        color: var(--color-secondary);
+    }
+
+    &.active {
+        font-weight: bold;
+    }
+}

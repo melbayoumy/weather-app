@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    font-size: 1.8rem;
+    min-height: 14.75rem;
+}
+
+.details {
+    display: flex;
+    align-items: flex-end;
+    padding-block-start: 30px;
+}
+
+.icon {
+    font-size: 6rem;
+    color: var(--color-secondary);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 25px;
+}
+
+.degree {
+    font-family: var(--font-family-numbers);
+    font-size: 5rem;
+    line-height: 3.75rem;
+}
+
+.description {
+    text-transform: capitalize;
+}
