@@ -38,7 +38,7 @@ const useWeather = (city: City | string) => {
     queryKey: [`${city}:${getToday()}`],
     queryFn: async ({ signal }) =>
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast/daily?lat=${cityObj.lat}&lon=${cityObj.lon}&units=metric&cnt=4&appid=${process.env.REACT_APP_WEATHER_API_KEY}`,
+        `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${cityObj.lat}&lon=${cityObj.lon}&units=metric&cnt=4&appid=${process.env.REACT_APP_WEATHER_API_KEY}`,
         {
           signal,
         }
