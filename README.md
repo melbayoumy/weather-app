@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-[https://website-app.onrender.com/](https://website-app.onrender.com/)
+[https://weather-app-ik0e.onrender.com/](https://weather-app-ik0e.onrender.com/)
 
 ## Get it working
 
