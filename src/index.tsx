@@ -6,6 +6,15 @@ import { createBrowserRouter, RouterProvider, redirect } from 'react-router-dom'
 import { cities, defaultCity } from '@/config/cities'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { disableReactDevTools } from '@fvilers/disable-react-devtools'
+
+// styles
+import './scss/global.scss'
+
+// disable dev tools for production
+if (process.env.NODE_ENV === 'production') {
+  disableReactDevTools()
+}
 
 const router = createBrowserRouter([
   {
@@ -13,7 +22,6 @@ const router = createBrowserRouter([
     loader: async () => {
       throw redirect(`/${defaultCity.key}`)
     },
-    element: <></>,
   },
   {
     path: '/:city',
